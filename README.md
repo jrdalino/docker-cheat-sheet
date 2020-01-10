@@ -23,18 +23,53 @@ $ docker image ls
 
 - Delete an image from the local image store
 ```
-$ docker image rm alpine:3.4
+$ docker image rm myimage:1.0
 ```
 
 ## Share
--
+- Push an image from a registry
 ```
-$ 
+$ docke push <AWS_ACCOUNT_ID>.dkr.ecr.ap-southeast-1.amazonaws.com/myimage:2.0
+```
+
+- Tag a local image with new image name and tag
+```
+$ docker tag myimage:1.0 <AWS_ACCOUNT_ID>.dkr.ecr.ap-southeast-1.amazonaws.com/myimage:2.0
+```
+
+- Pull an image from a registry
+```
+$ docker pull myimage:2.0
 ```
 
 ## Run
--
+- Run a container
 ```
-$ 
+$ docker run --name mycontainer -p 5000:80 myimage:1.0
 ```
 
+- List all containers
+```
+$ docker container ls --all
+```
+
+- Stop a running container using SIGTERM or SIGKILL
+```
+$ docker container stop mycontainer
+$ docker container kill mycontainer
+```
+
+- Remove a container
+```
+$ docker container rm mycontainer
+```
+
+- Print the last 100 lines of a container's logs
+```
+docker container logs --tail 100 mycontainer
+```
+
+- List the networks
+```
+$ docker network ls
+```
