@@ -4,10 +4,12 @@
 - https://docs.docker.com/docker-for-mac/install/
 
 ## Dockerfile
+- Install Maven
+
 ```
-$ FROM openjdk:8-jdk-alpine
-$ COPY target/book-service-0.1.0.jar app.jar
-$ ENTRYPOINT ["java","-jar","/app.jar"]
+FROM openjdk:8-jdk-alpine
+COPY target/book-service-0.1.0.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
 ```
 
 ## Build
