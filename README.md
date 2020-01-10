@@ -31,7 +31,7 @@ $ docker image rm myimage:1.0
 ## Share
 - Push an image from a registry
 ```
-$ docke push <AWS_ACCOUNT_ID>.dkr.ecr.ap-southeast-1.amazonaws.com/myimage:2.0
+$ docker push <AWS_ACCOUNT_ID>.dkr.ecr.ap-southeast-1.amazonaws.com/myimage:2.0
 ```
 
 - Tag a local image with new image name and tag
