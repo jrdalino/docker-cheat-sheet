@@ -1,4 +1,4 @@
-# docker-cheat-sheet
+# docker-notes
 
 ## Install
 - https://docs.docker.com/docker-for-mac/install/
